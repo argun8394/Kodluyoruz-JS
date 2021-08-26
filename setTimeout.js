@@ -51,19 +51,26 @@
 // alert(counter()); // 1
 // alert(counter()); // 2
 
-function factorial(n) {
-    if (n <= 10 && n >= 1) {
+// function factorial(n) {
+//     if (n <= 10 && n >= 1) {
 
-        if (n == 1) {
-            return 1;
-        } else {
-            return n * factorial(n - 1);
-        }
-    } else {
-        console.log("hatalı değer")
-    }
-}
+//         if (n == 1) {
+//             return 1;
+//         } else {
+//             return n * factorial(n - 1);
+//         }
+//     } else {
+//         console.log("hatalı değer")
+//     }
+// }
 
-const num = prompt('Enter a positive number: ');
-const result = factorial(num);
-console.log(result);
+// const num = prompt('Enter a positive number: ');
+// const result = factorial(num);
+// console.log(result);
+
+
+
+// const num2 = firstName => console.log(`Hello ${firstName}`)
+
+
+// num2("Berra");

@@ -41,5 +41,12 @@ const names=[{name:"Gustavo",age:34},{name:"Pelkas",age:26},{name:"Szalai", age:
 
 //some
 
-const some = names.some((item) =>item.age===23);
-console.log(some);
+// const some = names.some((item) =>item.age===23);
+// console.log(some);
+
+
+
+//every
+
+const every=names.every((item)=>item.age>10);
+console.log(every);

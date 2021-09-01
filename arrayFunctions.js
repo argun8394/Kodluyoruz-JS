@@ -48,5 +48,11 @@ const names=[{name:"Gustavo",age:34},{name:"Pelkas",age:26},{name:"Szalai", age:
 
 //every
 
-const every=names.every((item)=>item.age>10);
-console.log(every);
+// const every=names.every((item)=>item.age>10);
+// console.log(every);
+
+
+
+//includes
+const include=users.includes("Pelkas");
+console.log(include);

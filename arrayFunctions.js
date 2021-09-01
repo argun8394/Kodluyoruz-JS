@@ -12,6 +12,12 @@ includes
 
 //push 
 
-users.push("Enner");
-console.log(users);
+// users.push("Enner");
+// console.log(users);
 
+
+//map 
+
+users.map((item) => {
+    console.log(item)
+})

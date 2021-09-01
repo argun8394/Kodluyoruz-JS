@@ -36,5 +36,10 @@ const names=[{name:"Gustavo",age:34},{name:"Pelkas",age:26},{name:"Szalai", age:
 
 //filter 
 
-const filter = names.filter((item) =>item.name==="Szalai" &&item.age>20);
-console.log(filter);
+// const filter = names.filter((item) =>item.name==="Szalai" &&item.age>20);
+// console.log(filter);
+
+//some
+
+const some = names.some((item) =>item.age===23);
+console.log(some);

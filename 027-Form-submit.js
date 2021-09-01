@@ -10,6 +10,8 @@
 //     localStorage.setItem("input", inputNameDOM.value)
 // }
 
+
+// ***********FETCH***********
 // async function getData() {
 //     const post1 = await (
 //         await fetch('https://jsonplaceholder.typicode.com/posts/1')
@@ -34,23 +36,40 @@
 
 // getData();
 
-
-async function getData() {
-    const { data: post1 } =
-    await axios('https://jsonplaceholder.typicode.com/posts/1');
-
-
-    const { data: post2 } =
-    await axios('https://jsonplaceholder.typicode.com/posts/1');
-
-    const { data: post3 } =
-    await axios('https://jsonplaceholder.typicode.com/posts/1');
+// ****************AXİOS**********************
+// import axios from 'axios';
+// 13.9 K(gzipped: 4.9 K)
+// async function getData() {
+//     const { data: post1 } =
+//     await axios('https://jsonplaceholder.typicode.com/posts/1');
 
 
-    console.log("post1", post1);
-    console.log("post2", post2);
-    console.log("post3", post3);
+//     const { data: post2 } =
+//     await axios('https://jsonplaceholder.typicode.com/posts/1');
 
-}
+//     const { data: post3 } =
+//     await axios('https://jsonplaceholder.typicode.com/posts/1');
 
-getData();
+
+//     console.log("post1", post1);
+//     console.log("post2", post2);
+//     console.log("post3", post3);
+
+// }
+
+// getData();
+
+//***************PROMİSE******************************* */
+
+const getComments = (number) => {
+    return new Promise((resolve, reject) => {
+        if (number === 1) {
+            resolve({ text: "hello" });
+        }
+        reject("problem is ..........");
+    });
+};
+
+
+getComments(2).then((data) => console.log(data)) //doğruysa .then //hatalıysa .catch çalışır
+    .catch((err) => console.log()); //hatalıysa .catch çalışır

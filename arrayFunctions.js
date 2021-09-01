@@ -22,7 +22,7 @@ includes
 //     console.log(item)
 // })
 
-const names=[{name:"Gustavo"},{name:"Pelkas"},{name:"Szalai"}];
+const names=[{name:"Gustavo",age:34},{name:"Pelkas",age:26},{name:"Szalai", age:24 }];
 
 // names.map((item) => {
 //     console.log(item);
@@ -31,5 +31,10 @@ const names=[{name:"Gustavo"},{name:"Pelkas"},{name:"Szalai"}];
 
 //find 
 
-const result = names.find((item) => item.name==="Pelkas");
-console.log(result)
+// const result = names.find((item) => item.name==="Pelkas");
+// console.log(result)
+
+//filter 
+
+const filter = names.filter((item) =>item.name==="Szalai" &&item.age>20);
+console.log(filter);

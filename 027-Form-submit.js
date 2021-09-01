@@ -61,15 +61,43 @@
 
 //***************PROMİSE******************************* */
 
-const getComments = (number) => {
-    return new Promise((resolve, reject) => {
-        if (number === 1) {
-            resolve({ text: "hello" });
-        }
-        reject("problem is ..........");
-    });
+// const getComments = (number) => {
+//     return new Promise((resolve, reject) => {
+//         if (number === 1) {
+//             resolve({ text: "hello" });
+//         }
+//         reject("problem is ..........");
+//     });
+// };
+
+
+// getComments(2).then((data) => console.log(data)) //doğruysa .then //hatalıysa .catch çalışır
+//     .catch((err) => console.log(err)); //hatalıysa .catch çalışır
+
+
+const getPost1 = () => {
+    return new Promise(async(resolve, reject) => {
+        const { data } = await axios('https://jsonplaceholder.typicode.com/posts/1');
+        // resolve(data);
+        reject("sorun oluştu")
+    })
 };
 
+const getPost2 = (post2) => {
+    return new Promise(async(resolve, reject) => {
+        const { data } = await axios('https://jsonplaceholder.typicode.com/posts/1');
+        // resolve(data);
+        reject("bir sorun daha oluştu")
+    })
+};
 
-getComments(2).then((data) => console.log(data)) //doğruysa .then //hatalıysa .catch çalışır
-    .catch((err) => console.log()); //hatalıysa .catch çalışır
+(async() => {
+    try {
+        const post1 = await getPost1();
+        const post2 = await getPost2(1);
+        console.log(post1);
+        console.log(post2);
+    } catch (err) {
+        console.log(err)
+    }
+})();
